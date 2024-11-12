@@ -1,0 +1,145 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.8.4">
+  <diagram name="Page-1" id="HtKzT_g_S-8FhWnLd0YV">
+    <mxGraphModel dx="1195" dy="615" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="XJeS8cVBaoiCwOhpYW4y-11" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="150" y="170" width="450" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="XJeS8cVBaoiCwOhpYW4y-41" value="" style="group" vertex="1" connectable="0" parent="XJeS8cVBaoiCwOhpYW4y-11">
+          <mxGeometry y="30" width="450" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="XJeS8cVBaoiCwOhpYW4y-3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#82B366;dashed=1;" vertex="1" parent="XJeS8cVBaoiCwOhpYW4y-41">
+          <mxGeometry x="11.84" y="28.124999999999996" width="438.16" height="151.875" as="geometry" />
+        </mxCell>
+        <mxCell id="XJeS8cVBaoiCwOhpYW4y-8" value="Asyncio Events Loop" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#82B366;" vertex="1" parent="XJeS8cVBaoiCwOhpYW4y-41">
+          <mxGeometry width="177.6315789473684" height="33.75" as="geometry" />
+        </mxCell>
+        <mxCell id="XJeS8cVBaoiCwOhpYW4y-42" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="120" y="90" width="500" height="312.26" as="geometry" />
+        </mxCell>
+        <mxCell id="XJeS8cVBaoiCwOhpYW4y-9" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#82B366;dashed=1;" vertex="1" parent="XJeS8cVBaoiCwOhpYW4y-42">
+          <mxGeometry x="23.25581395348837" y="46.839" width="476.74418604651163" height="265.421" as="geometry" />
+        </mxCell>
+        <mxCell id="XJeS8cVBaoiCwOhpYW4y-4" value="Server Process (Uvicorn)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#82B366;" vertex="1" parent="XJeS8cVBaoiCwOhpYW4y-42">
+          <mxGeometry width="209.30232558139537" height="46.838999999999984" as="geometry" />
+        </mxCell>
+        <mxCell id="XJeS8cVBaoiCwOhpYW4y-35" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;Common Resources:&lt;/font&gt;&lt;div style=&quot;font-size: 8px;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;- DB connection&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 8px;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;- configs&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="XJeS8cVBaoiCwOhpYW4y-42">
+          <mxGeometry x="217.44" y="70" width="88.37" height="36.18" as="geometry" />
+        </mxCell>
+        <mxCell id="XJeS8cVBaoiCwOhpYW4y-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=halfCircle;endFill=0;" edge="1" parent="1" source="XJeS8cVBaoiCwOhpYW4y-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="30" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XJeS8cVBaoiCwOhpYW4y-29" value="GitHub API&lt;div&gt;Requests&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="XJeS8cVBaoiCwOhpYW4y-28">
+          <mxGeometry x="0.2541" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XJeS8cVBaoiCwOhpYW4y-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="XJeS8cVBaoiCwOhpYW4y-1" target="XJeS8cVBaoiCwOhpYW4y-46">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="210" y="500" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="210" y="530" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XJeS8cVBaoiCwOhpYW4y-33" value="Write Events Data&lt;div&gt;to Database&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="XJeS8cVBaoiCwOhpYW4y-30">
+          <mxGeometry x="0.3936" relative="1" as="geometry">
+            <mxPoint y="-45" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XJeS8cVBaoiCwOhpYW4y-38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;dashed=1;" edge="1" parent="1" source="XJeS8cVBaoiCwOhpYW4y-1" target="XJeS8cVBaoiCwOhpYW4y-35">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="250" />
+              <mxPoint x="360" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XJeS8cVBaoiCwOhpYW4y-1" value="APScheduler" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="180" y="270" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XJeS8cVBaoiCwOhpYW4y-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=oval;endFill=1;" edge="1" parent="1" source="XJeS8cVBaoiCwOhpYW4y-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="450" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="560" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XJeS8cVBaoiCwOhpYW4y-22" value="Endpoints&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="XJeS8cVBaoiCwOhpYW4y-19">
+          <mxGeometry x="0.042" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XJeS8cVBaoiCwOhpYW4y-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="XJeS8cVBaoiCwOhpYW4y-2" target="XJeS8cVBaoiCwOhpYW4y-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="350" />
+              <mxPoint x="240" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XJeS8cVBaoiCwOhpYW4y-27" value="Change Schedule" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="XJeS8cVBaoiCwOhpYW4y-25">
+          <mxGeometry x="-0.0561" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XJeS8cVBaoiCwOhpYW4y-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="XJeS8cVBaoiCwOhpYW4y-2" target="XJeS8cVBaoiCwOhpYW4y-46">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="510" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="510" y="420" />
+              <mxPoint x="320" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XJeS8cVBaoiCwOhpYW4y-43" value="Reads Data&lt;div&gt;From Database&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="XJeS8cVBaoiCwOhpYW4y-34">
+          <mxGeometry x="0.7691" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XJeS8cVBaoiCwOhpYW4y-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="XJeS8cVBaoiCwOhpYW4y-2" target="XJeS8cVBaoiCwOhpYW4y-46">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="410" y="500" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="525" y="440" />
+              <mxPoint x="410" y="440" />
+              <mxPoint x="410" y="530" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XJeS8cVBaoiCwOhpYW4y-45" value="Writes Data&lt;div&gt;to Database&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="XJeS8cVBaoiCwOhpYW4y-44">
+          <mxGeometry x="0.7422" relative="1" as="geometry">
+            <mxPoint x="12" y="-50" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XJeS8cVBaoiCwOhpYW4y-2" value="FastAPI" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="470" y="273.55" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XJeS8cVBaoiCwOhpYW4y-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;dashed=1;" edge="1" parent="1" source="XJeS8cVBaoiCwOhpYW4y-23">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="570" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XJeS8cVBaoiCwOhpYW4y-23" value="&lt;ul style=&quot;font-size: 8px;&quot;&gt;&lt;li style=&quot;font-size: 8px;&quot;&gt;&lt;span style=&quot;font-size: 8px; text-align: center; text-wrap-mode: nowrap; background-color: rgb(255, 255, 255);&quot;&gt;GET /api/repos/{owner}/{repo}/events&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;text-align: center; text-wrap-mode: nowrap; background-color: rgb(255, 255, 255);&quot;&gt;GET /api/repos/{owner}/{repo}/events/stats&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;font-size: 8px;&quot;&gt;&lt;span style=&quot;font-size: 8px; text-align: center; text-wrap-mode: nowrap; background-color: rgb(255, 255, 255);&quot;&gt;GET /api/repos/&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;font-size: 8px;&quot;&gt;GET /api/repos/active&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;ul style=&quot;font-size: 8px;&quot;&gt;&lt;li style=&quot;font-size: 8px;&quot;&gt;POST /api/repos/{owner}/{repo}/activate&lt;/li&gt;&lt;li&gt;POST /api/repos/{owner}/{repo}/deactivate&lt;/li&gt;&lt;li&gt;POST /api/repos/&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="620" y="390" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="XJeS8cVBaoiCwOhpYW4y-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="XJeS8cVBaoiCwOhpYW4y-2" target="XJeS8cVBaoiCwOhpYW4y-35">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="525" y="254" />
+              <mxPoint x="400" y="254" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XJeS8cVBaoiCwOhpYW4y-46" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;MongoDB&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="290" y="490" width="60" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

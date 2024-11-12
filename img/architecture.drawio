@@ -1,0 +1,117 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.8.4">
+  <diagram name="Page-1" id="IZc5SSaYlkj7JltY9C_z">
+    <mxGraphModel dx="2443" dy="1920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ko-3o_nY1ckoZSDPEtci-13" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=none;dashed=1;strokeColor=#331A00;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="-50" y="-90" width="705" height="470" as="geometry" />
+        </mxCell>
+        <mxCell id="ko-3o_nY1ckoZSDPEtci-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.022;entryY=0.318;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="ko-3o_nY1ckoZSDPEtci-3" target="ko-3o_nY1ckoZSDPEtci-26">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-200" y="100" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-80" y="131" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ko-3o_nY1ckoZSDPEtci-30" value="&lt;div&gt;API request with&lt;/div&gt;organization&lt;div&gt;personal token&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ko-3o_nY1ckoZSDPEtci-28">
+          <mxGeometry x="0.02" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ko-3o_nY1ckoZSDPEtci-3" value="FastAPI Server" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="90" y="90" width="150" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="ko-3o_nY1ckoZSDPEtci-5" value="MongoDB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="450" y="100" width="80" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ko-3o_nY1ckoZSDPEtci-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.6;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="239.9999999999999" y="140" as="sourcePoint" />
+            <mxPoint x="450" y="142" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="360" y="140" />
+              <mxPoint x="360" y="142" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ko-3o_nY1ckoZSDPEtci-7" value="Reads Events&lt;div&gt;For Statistics&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ko-3o_nY1ckoZSDPEtci-6">
+          <mxGeometry x="-0.0667" y="4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ko-3o_nY1ckoZSDPEtci-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.6;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="ko-3o_nY1ckoZSDPEtci-3" target="ko-3o_nY1ckoZSDPEtci-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="270" y="170" as="sourcePoint" />
+            <mxPoint x="450" y="172" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="330" y="172" />
+              <mxPoint x="330" y="172" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ko-3o_nY1ckoZSDPEtci-10" value="Writes Events Data" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ko-3o_nY1ckoZSDPEtci-9">
+          <mxGeometry x="-0.0667" y="4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ko-3o_nY1ckoZSDPEtci-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ko-3o_nY1ckoZSDPEtci-20">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="200" as="targetPoint" />
+            <mxPoint x="340" y="485" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ko-3o_nY1ckoZSDPEtci-17" value="Uses API&lt;div&gt;To Get Statistics&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ko-3o_nY1ckoZSDPEtci-16">
+          <mxGeometry x="0.0227" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ko-3o_nY1ckoZSDPEtci-18" value="API Key&lt;br&gt;Security Middleware" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ko-3o_nY1ckoZSDPEtci-16">
+          <mxGeometry x="0.6562" y="-1" relative="1" as="geometry">
+            <mxPoint x="-1" y="-18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ko-3o_nY1ckoZSDPEtci-19" value="HTTPS&lt;br&gt;API&lt;br&gt;Endpoints" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ko-3o_nY1ckoZSDPEtci-16">
+          <mxGeometry x="0.3935" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ko-3o_nY1ckoZSDPEtci-20" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fillColor=#6d8764;fontColor=#171717;strokeColor=#3A5431;" vertex="1" parent="1">
+          <mxGeometry x="340" y="440" width="40" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ko-3o_nY1ckoZSDPEtci-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="ko-3o_nY1ckoZSDPEtci-22">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="154.90999999999985" as="targetPoint" />
+            <Array as="points">
+              <mxPoint y="190" />
+              <mxPoint y="155" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ko-3o_nY1ckoZSDPEtci-22" value="Events&lt;div&gt;Data&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.direct_data;whiteSpace=wrap;rotation=0;" vertex="1" parent="1">
+          <mxGeometry x="-119.91" y="170" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ko-3o_nY1ckoZSDPEtci-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ko-3o_nY1ckoZSDPEtci-26">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-120" y="190" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-120" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ko-3o_nY1ckoZSDPEtci-35" value="API&lt;div&gt;response&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ko-3o_nY1ckoZSDPEtci-27">
+          <mxGeometry x="-0.099" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ko-3o_nY1ckoZSDPEtci-26" value="GitHub API" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-370" y="90" width="120" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="ko-3o_nY1ckoZSDPEtci-36" value="Cloud Containers&lt;div style=&quot;font-size: 20px;&quot;&gt;&amp;nbsp;AWS/GCP/Azure&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#331A00;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="90" y="-130" width="380" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
