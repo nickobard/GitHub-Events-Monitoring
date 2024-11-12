@@ -1,6 +1,6 @@
 # System Design of GitHub Repository Events Monitoring Application
 
-Here put the contents 
+TODO - HERE PUT THE CONTENTS 
 
 ## Architecture
 
@@ -54,11 +54,18 @@ Other authentication flows can be used, but they require more complexity and are
 
 ### Server
 
+There are 2 main components:
+
+- As a web server we will use FastAPI python framework. Like Flask, it is very simple and very useful when we need to write API very fast.
+- For data gathering we will use APSchedule python framework, which allows to plan tasks execution, like sending requests to GitHub API.
+
+Both components will run in the same process concurrently, accessing common resources - like modules, database connections and configurations.
+
 ![](img/server_component.svg)
 
 #### GitHub API use
 
-For our use we need to use only following endpoints:
+For our case we need to use only following endpoints:
 
 - `GET /repos/{owner}/{repo}/events` - endpoint to get events.
   - Query parameters:
@@ -117,6 +124,10 @@ Explain your choice, maybe some pseudocode or diagram to express idea of how it 
 ##### Other approaches
 
 Here write down all important alternatives you have studied
+
+#### Application API Endpoints
+
+TODO - give some info here, pls. But really fast.
 
 ### Database
 
