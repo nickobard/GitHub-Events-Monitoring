@@ -70,8 +70,6 @@ After thorough consideration of each option, the best solution is to use the org
 - Use conditional requests to check if there were new events to avoid rate limit usage.
 - If needed, send requests to check API rate limit. Such requests do not affect the rate limit.
 
-**TODO**: If there is time, please add a business activity diagram here.
-
 #### Alternatives
 
 Other authentication flows can be used, but they require more complexity and are not ideal for our use case:
