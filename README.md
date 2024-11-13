@@ -27,19 +27,19 @@ Some demo uses of GitHub API with different flows are presented in [github_api.i
 
 There are several obstacles and limitations when we use GitHub API:
 - There is a limit on API calls from the GitHub API.
-- Events are paginated.1
+- Events are paginated.
 - Only events created withing the past 90 days are included.
 - Only last $\approx$ 300 events are included (documentation implies exactly 300, but in reality it is under 300 and not precise).
-- Documentation says, that API is not build to server real-time use cases, depending on the time of day, event latency can be anywhere from 30s to 6h.
-- Best practices advices to not use concurrent requests (though up 100 concurrent requests if possible).
+- Documentation says, that API is not build to serve real-time use cases, depending on the time of day, event latency can be anywhere from 30s to 6h.
+- Best practices advices to not use concurrent requests (though up to 100 concurrent requests is possible).
 
 #### Proposed approach
 
-After thorough consideration of each option, the best solution will be:
+After thorough consideration of each option, the best solution will be using organizational personal access token flow:
 - Create GitHub organization.
 - Create Personal Access Token for the organization.
-- Use authenticated API utilizing resources of organization.
-- Use conditional requests to check if there were events to avoid requests usage.
+- Use authenticated API utilizing resources of the organization.
+- Use conditional requests to check if there were new events to avoid rate limit usage.
 - If needed, send requests to check API rate limit. Such requests does not affect rate limit.
 
 
@@ -56,8 +56,8 @@ Other authentication flows can be used, but they require more complexity and are
 
 There are 2 main components:
 
-- As a web server we will use FastAPI python framework. Like Flask, it is very simple and very useful when we need to write API very fast.
-- For data gathering we will use APSchedule python framework, which allows to plan tasks execution, like sending requests to GitHub API.
+- Web Server - we will use FastAPI python framework. Like Flask, it is very simple and very useful when we need to write API very fast.
+- Scheduler - for data gathering we will use APSchedule python framework, which allows to plan tasks execution, like sending requests to GitHub API.
 
 Both components will run in the same process concurrently, accessing common resources - like modules, database connections and configurations.
 
@@ -80,32 +80,46 @@ For our case we need to use only following endpoints:
 
 Example of event scheme:
 ```json
-{'id': '43756195112',
- 'type': 'PushEvent',
- 'actor': {'id': 68920274,
-  'login': 'eleazar-rivas',
-  'display_login': 'eleazar-rivas',
-  'gravatar_id': '',
-  'url': 'https://api.github.com/users/eleazar-rivas',
-  'avatar_url': 'https://avatars.githubusercontent.com/u/68920274?'},
- 'repo': {'id': 879455410,
-  'name': 'eleazar-rivas/ESET-KeyGen-2024',
-  'url': 'https://api.github.com/repos/eleazar-rivas/ESET-KeyGen-2024'},
- 'payload': {'repository_id': 879455410,
-  'push_id': 21180234309,
-  'size': 1,
-  'distinct_size': 1,
-  'ref': 'refs/heads/master',
-  'head': '0e3d96550524b41fdace6542aa45d9f8010e6e1b',
-  'before': '831a60d3aa9d226bfe9cf67c817c8ba322a8f5d2',
-  'commits': [{'sha': '0e3d96550524b41fdace6542aa45d9f8010e6e1b',
-    'author': {'email': '68920274+eleazar-rivas@users.noreply.github.com',
-     'name': 'eleazar-rivas'},
-    'message': 'Commit',
-    'distinct': True,
-    'url': 'https://api.github.com/repos/eleazar-rivas/ESET-KeyGen-2024/commits/0e3d96550524b41fdace6542aa45d9f8010e6e1b'}]},
- 'public': True,
- 'created_at': '2024-11-12T20:13:10Z'}
+{
+  "id": "43756195112",
+  "type": "PushEvent",
+  "actor": {
+    "id": 68920274,
+    "login": "eleazar-rivas",
+    "display_login": "eleazar-rivas",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/eleazar-rivas",
+    "avatar_url": "https://avatars.githubusercontent.com/u/68920274?"
+  },
+  "repo": {
+    "id": 879455410,
+    "name": "eleazar-rivas/ESET-KeyGen-2024",
+    "url": "https://api.github.com/repos/eleazar-rivas/ESET-KeyGen-2024"
+  },
+  "payload": {
+    "repository_id": 879455410,
+    "push_id": 21180234309,
+    "size": 1,
+    "distinct_size": 1,
+    "ref": "refs/heads/master",
+    "head": "0e3d96550524b41fdace6542aa45d9f8010e6e1b",
+    "before": "831a60d3aa9d226bfe9cf67c817c8ba322a8f5d2",
+    "commits": [
+      {
+        "sha": "0e3d96550524b41fdace6542aa45d9f8010e6e1b",
+        "author": {
+          "email": "68920274+eleazar-rivas@users.noreply.github.com",
+          "name": "eleazar-rivas"
+        },
+        "message": "Commit",
+        "distinct": true,
+        "url": "https://api.github.com/repos/eleazar-rivas/ESET-KeyGen-2024/commits/0e3d96550524b41fdace6542aa45d9f8010e6e1b"
+      }
+    ]
+  },
+  "public": true,
+  "created_at": "2024-11-12T20:13:10Z"
+}
 ```
 
 - Events are sorted by `created_at` (FIFO) - the fact that it is sorted is not documented, but it was confirmed empirically in the api demo.
@@ -120,6 +134,8 @@ Some demo uses of GitHub API can be found here [github_api.ipynb](github_api.ipy
 ##### Proposed approach
 TODO - how the proposed algorithm can work
 Explain your choice, maybe some pseudocode or diagram to express idea of how it will work
+
+
 
 ##### Other approaches
 
