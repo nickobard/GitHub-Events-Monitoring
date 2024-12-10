@@ -47,7 +47,7 @@ GitHub API supports different strategies on how to use the API:
   - Different authentication flows (Personal Access Token, GitHub App, OAuth).
   - GitHub Enterprise Cloud organization gives 15,000 requests per hour.
 
-Some demo uses of GitHub API with different flows are presented in [github_api.ipynb](github_api.ipynb).
+Some demo uses of GitHub API with different flows are presented in [github_api.ipynb](../demos/github_api.ipynb).
 
 #### Obstacles
 
@@ -151,7 +151,7 @@ Example of event schema:
 - Events are sorted by `created_at` (FIFO)—the fact that it is sorted is not documented, but it was confirmed empirically in the API demo.
 - The `type` field represents the event type: `PushEvent` in the example above. Other examples can be seen in the [documentation](https://docs.github.com/en/rest/using-the-rest-api/github-event-types?apiVersion=2022-11-28).
 
-Some demo uses of the GitHub API can be found here: [github_api.ipynb](github_api.ipynb).
+Some demo uses of the GitHub API can be found here: [github_api.ipynb](../demos/github_api.ipynb).
 
 #### Scheduler
 
